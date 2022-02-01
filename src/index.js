@@ -10,6 +10,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(routes);
 
-app.listen(9090, '0.0.0.0', () => {
-  console.log('started server at port:', 9090);
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+  console.log('started server at port:', port);
 });
